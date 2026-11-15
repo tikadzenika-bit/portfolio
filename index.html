@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NNN Holding — საიტები თბილისის ბიზნესისთვის</title>
+<meta name="description" content="NNN Holding აკეთებს საიტებს თბილისის ბარბერშოპების, სალონებისა და სასტუმრო სახლებისთვის: სამი ენა, ჩაწერა WhatsApp-ით, ადმინ პანელი. შვიდი დემო საიტი ცოცხლად.">
+<meta property="og:title" content="NNN Holding — საიტები თბილისის ბიზნესისთვის">
+<meta property="og:description" content="სამი ენა, ჩაწერა WhatsApp-ით, ადმინ პანელი. შვიდი დემო საიტი ცოცხლად.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tikadzenika-bit.github.io/portfolio/">
+<meta property="og:image" content="https://tikadzenika-bit.github.io/portfolio/assets/shots/liberty-d0.jpg">
+<link rel="canonical" href="https://tikadzenika-bit.github.io/portfolio/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="bar">
+  <a class="wordmark" href="#top">NNN Holding</a>
+  <nav class="links" aria-label="მთავარი მენიუ">
+    <a href="#work" data-i18n="nav.work">ნამუშევრები</a>
+    <a href="#inside" data-i18n="nav.inside">რა შედის</a>
+    <a href="#how" data-i18n="nav.how">როგორ ვმუშაობთ</a>
+    <a href="#contact" data-i18n="nav.contact">კონტაქტი</a>
+  </nav>
+  <button class="lang" type="button" id="lang" aria-label="Switch language">EN</button>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="h1">
+  <div class="ring" id="ring" aria-hidden="true"></div>
+  <div class="core">
+    <h1 id="h1"><span class="line"><span data-i18n="hero.l1">საიტები თბილისის</span></span><span class="line"><span data-i18n="hero.l2">ბიზნესისთვის</span></span></h1>
+    <p class="hero-sub" id="heroSub" data-i18n="hero.sub">სამი ენა, ჩაწერა WhatsApp-ით და ადმინ პანელი, საიდანაც ფასებს თავად ცვლით. შვიდი დემო ცოცხლად დევს.</p>
+    <a class="btn" href="#work" data-i18n="hero.cta">ნახე ნამუშევრები</a>
+  </div>
+</section>
+
+<section class="work" id="work" aria-labelledby="h-work">
+  <div class="work-head">
+    <h2 id="h-work" data-i18n="work.h">ნამუშევრები</h2>
+    <p class="work-note" data-i18n="work.note">შვიდივე დემო ვერსიაა: ნამდვილი ბიზნესისთვის გაკეთებული საჩვენებელი საიტი. ფასები და ფოტოები მათზე ნიმუშია.</p>
+    <div class="filter" role="group" aria-label="ფილტრი">
+      <button type="button" class="on" data-f="all" data-i18n="f.all">ყველა</button>
+      <button type="button" data-f="barber" data-i18n="f.barber">ბარბერშოპი</button>
+      <button type="button" data-f="salon" data-i18n="f.salon">სალონი</button>
+      <button type="button" data-f="guest" data-i18n="f.guest">სასტუმრო სახლი</button>
+    </div>
+  </div>
+  <div id="projects"></div>
+</section>
+
+<section class="inside" id="inside" aria-labelledby="h-inside">
+  <h2 id="h-inside" data-i18n="in.h">რა შედის საიტში</h2>
+  <div class="cols">
+    <div class="col">
+      <h3 data-i18n="in.a">საიტი</h3>
+      <ul id="in-a"></ul>
+      <p class="sum" data-i18n="in.a.sum">ერთი გვერდი, რომელიც ტელეფონზე ისე იკითხება, როგორც კომპიუტერზე.</p>
+    </div>
+    <div class="col">
+      <h3 data-i18n="in.b">ჩაწერა</h3>
+      <ul id="in-b"></ul>
+      <p class="sum" data-i18n="in.b.sum">კლიენტი ირჩევს და მზა ტექსტი პირდაპირ თქვენს WhatsApp-ში მოდის.</p>
+    </div>
+    <div class="col">
+      <h3 data-i18n="in.c">ადმინ პანელი</h3>
+      <ul id="in-c"></ul>
+      <p class="sum" data-i18n="in.c.sum">ფასს, ფოტოს და საათებს თავად ცვლით, პროგრამისტის გარეშე.</p>
+    </div>
+    <p class="desc" id="desc" aria-live="polite" data-i18n="in.hint">მიიტანეთ კურსორი სახელზე და აქ გამოჩნდება, რას ნიშნავს.</p>
+  </div>
+</section>
+
+<section class="how" id="how" aria-labelledby="h-how">
+  <div class="how-top">
+    <h2 id="h-how" data-i18n="how.h">როგორ ვმუშაობთ</h2>
+    <div class="how-btns">
+      <button type="button" id="howPrev" aria-label="უკან"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="3"/></svg></button>
+      <button type="button" id="howNext" aria-label="წინ"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="3"/></svg></button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"><span id="howBar"></span></div>
+  <div class="row" id="howRow" tabindex="0"></div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="h-contact">
+  <h2 class="visually-hidden" id="h-contact" data-i18n="nav.contact">კონტაქტი</h2>
+  <p class="say" data-i18n="c.say">კარგი შეფასებები გაქვთ, საიტი კი არა? მოგვწერეთ და დემოს უფასოდ გაჩვენებთ.</p>
+  <img class="c-pic" src="assets/phone/lea-m0.jpg" width="480" height="600" alt="Guest House Lea-ს საიტი ტელეფონის ეკრანზე" loading="lazy">
+  <div class="c-links">
+    <p class="q" data-i18n="c.q">გინდათ ასეთი საიტი?</p>
+    <p class="c-meta" data-i18n="c.meta">თბილისი · ვპასუხობთ იმავე დღეს</p>
+    <div id="cLinks"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="tiles">
+  <div class="tile t-say">
+    <p data-i18n="ft.say">საიტი, რომელსაც მფლობელი თავად მართავს.</p>
+    <small data-i18n="ft.legal">© 2026 NNN Holding · Web Developing. ნაჩვენები საიტები დემო ვერსიებია.</small>
+  </div>
+  <nav class="tile t-nav" aria-label="ქვედა მენიუ">
+    <a href="#work" data-i18n="nav.work">ნამუშევრები</a>
+    <a href="#inside" data-i18n="nav.inside">რა შედის</a>
+    <a href="#how" data-i18n="nav.how">როგორ ვმუშაობთ</a>
+    <a href="#contact" data-i18n="nav.contact">კონტაქტი</a>
+  </nav>
+  <div class="tile t-time">
+    <p data-i18n="ft.city">თბილისი</p>
+    <p class="clock" id="clock">--:--</p>
+  </div>
+  <div class="tile t-mail">
+    <p data-i18n="ft.code">კოდი ღიაა GitHub-ზე</p>
+    <a href="https://github.com/tikadzenika-bit" rel="noopener">github.com/tikadzenika-bit</a>
+  </div>
+  <div class="tile t-mark"><svg viewBox="0 0 640 120" role="img" aria-label="NNN Holding"><text x="320" y="92" text-anchor="middle" font-size="112" letter-spacing="-5" fill="currentColor">NNN Holding</text></svg></div>
+  <a class="tile t-go" href="#contact">
+    <span data-i18n="ft.go">მოგვწერეთ დემოსთვის</span>
+    <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M8 40 40 8M14 8h26v26" fill="none" stroke="currentColor" stroke-width="4"/></svg>
+  </a>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
