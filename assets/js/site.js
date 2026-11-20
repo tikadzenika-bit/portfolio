@@ -56,7 +56,8 @@
       return '<article class="project rv" id="p-' + p.id + '" data-type="' + p.type + '">' +
         '<div class="strip" tabindex="0" aria-label="' + p.name + '">' + imgs + '</div>' +
         '<div class="facts"><h3>' + p.name + ' <span>' + L.cat + '</span></h3><p class="place">' + L.place +
-        '</p><p class="langs">' + p.langs + '</p><p class="what">' + L.what + '</p></div>' +
+        '</p><p class="langs">' + p.langs + '</p><p class="what">' + L.what + '</p>' +
+        '<p class="price"><span>' + t('price') + '</span> ' + money(p.price) + '</p></div>' +
         '<a class="open" href="' + p.url + '" target="_blank" rel="noopener">' + t('open') + ARROW + '</a></article>';
     }).join('');
     $$('.strip', box).forEach(function (s) {
@@ -90,6 +91,17 @@
       applyFilter();
     });
   });
+
+  /* ---------- prices ---------- */
+  function money(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ').replace(/\s/g, '\u00a0') + '\u00a0₾'; }
+  function buildTiers() {
+    $('#tiers').innerHTML = TIERS.map(function (T) {
+      var ex = T.ex.map(function (id) { var p = PROJECTS.filter(function (x) { return x.id === id; })[0];
+        return '<a href="#p-' + id + '">' + p.name + '</a>'; }).join(', ');
+      return '<div class="tier rv"><p class="amount">' + money(T.from) + ' – ' + money(T.to) + '</p><div><h3>' + T[lang][0] + '</h3><p>' + T[lang][1] + '</p><p class="ex">' + t('pr.ex') + ' ' + ex + '</p></div></div>';
+    }).join('');
+    observe();
+  }
 
   /* ---------- features ---------- */
   var desc = $('#desc');
@@ -144,7 +156,7 @@
     $$('[data-i18n]').forEach(function (el) { el.textContent = t(el.dataset.i18n); });
     document.title = t('title');
     $('#lang').textContent = lang === 'en' ? 'ქარ' : 'EN';
-    buildProjects(); buildFeatures(); buildSteps(); buildContact();
+    buildProjects(); buildTiers(); buildFeatures(); buildSteps(); buildContact();
   }
   $('#lang').addEventListener('click', function () {
     lang = lang === 'en' ? 'ka' : 'en';
@@ -159,7 +171,7 @@
   function observe() {
     $$('.rv:not(.in)').forEach(function (el) { if (io) io.observe(el); else el.classList.add('in'); });
   }
-  [['.work-head > *', 1], ['.inside h2', 0], ['.col', 1], ['.desc', 0], ['.how-top', 0], ['.progress', 0], ['.row', 0],
+  [['.work-head > *', 1], ['.prices h2', 0], ['.pr-note', 0], ['.inside h2', 0], ['.col', 1], ['.desc', 0], ['.how-top', 0], ['.progress', 0], ['.row', 0],
    ['.contact > *', 1], ['.tile', 1]].forEach(function (g) {
     $$(g[0]).forEach(function (el, i) { el.classList.add('rv'); if (g[1]) el.style.setProperty('--d', i % 6); });
   });

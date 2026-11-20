@@ -232,3 +232,22 @@ h2 { font-size: var(--step-head); font-weight: 400; line-height: 1.1; letter-spa
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .rv { opacity: 1; transform: none; }
 }
+
+/* prices */
+.facts .price { grid-column: 9 / 13; color: var(--accent); font-weight: 500; }
+.facts .price span { color: var(--muted); font-weight: 400; }
+.prices { padding: var(--gap) var(--m) 0; }
+.prices h2 { margin-bottom: clamp(40px, 6vw, 88px); }
+.tier { display: grid; grid-template-columns: 5fr 7fr; gap: 20px 40px; padding: 36px 32px; align-items: start; }
+.tier:nth-child(odd) { background: var(--surface); }
+.tier .amount { font-size: var(--step-head); font-weight: 500; letter-spacing: -0.03em; white-space: nowrap; }
+.tier h3 { font-size: var(--step-lead); font-weight: 500; margin-bottom: 10px; }
+.tier p { max-width: 52ch; }
+.tier .ex { color: var(--muted); margin-top: 14px; }
+.tier .ex a { color: var(--ink); }
+.tier .ex a:hover { color: var(--accent); }
+.pr-note { margin-top: 32px; color: var(--muted); max-width: 70ch; }
+@media (max-width: 900px) {
+  .tier { grid-template-columns: 1fr; padding: 28px 20px; }
+  .facts .price { grid-column: 1 / -1; }
+}

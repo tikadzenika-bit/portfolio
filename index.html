@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NNN Holding — საიტები თბილისის ბიზნესისთვის</title>
-<meta name="description" content="NNN Holding აკეთებს საიტებს თბილისის ბარბერშოპების, სალონებისა და სასტუმრო სახლებისთვის: სამი ენა, ჩაწერა WhatsApp-ით, ადმინ პანელი. ათი დემო საიტი ცოცხლად.">
-<meta property="og:title" content="NNN Holding — საიტები თბილისის ბიზნესისთვის">
-<meta property="og:description" content="სამი ენა, ჩაწერა WhatsApp-ით, ადმინ პანელი. ათი დემო საიტი ცოცხლად.">
+<title>Gridline — საიტები თბილისის ბიზნესისთვის</title>
+<meta name="description" content="Gridline აკეთებს საიტებს თბილისის ბარბერშოპების, სალონების, კაფეების, მაღაზიებისა და სასტუმრო სახლებისთვის: სამი ენა, ჩაწერა WhatsApp-ით, ადმინ პანელი. თოთხმეტი დემო საიტი და ფასები 800 ₾-დან.">
+<meta property="og:title" content="Gridline — საიტები თბილისის ბიზნესისთვის">
+<meta property="og:description" content="სამი ენა, ჩაწერა WhatsApp-ით, ადმინ პანელი. თოთხმეტი დემო საიტი და ფასები 800 ₾-დან.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tikadzenika-bit.github.io/portfolio/">
 <meta property="og:image" content="https://tikadzenika-bit.github.io/portfolio/assets/shots/liberty-d0.jpg">
@@ -24,9 +24,10 @@
 <body>
 
 <header class="bar">
-  <a class="wordmark" href="#top">NNN Holding</a>
+  <a class="wordmark" href="#top">Gridline</a>
   <nav class="links" aria-label="მთავარი მენიუ">
     <a href="#work" data-i18n="nav.work">ნამუშევრები</a>
+    <a href="#prices" data-i18n="nav.prices">ფასები</a>
     <a href="#inside" data-i18n="nav.inside">რა შედის</a>
     <a href="#how" data-i18n="nav.how">როგორ ვმუშაობთ</a>
     <a href="#contact" data-i18n="nav.contact">კონტაქტი</a>
@@ -40,7 +41,7 @@
   <div class="ring" id="ring" aria-hidden="true"></div>
   <div class="core">
     <h1 id="h1"><span class="line"><span data-i18n="hero.l1">საიტები თბილისის</span></span><span class="line"><span data-i18n="hero.l2">ბიზნესისთვის</span></span></h1>
-    <p class="hero-sub" id="heroSub" data-i18n="hero.sub">სამი ენა, ჩაწერა WhatsApp-ით და ადმინ პანელი, საიდანაც ფასებს თავად ცვლით. ათი დემო ცოცხლად დევს.</p>
+    <p class="hero-sub" id="heroSub" data-i18n="hero.sub">სამი ენა, ჩაწერა WhatsApp-ით და ადმინ პანელი, საიდანაც ფასებს თავად ცვლით. თოთხმეტი დემო ცოცხლად დევს.</p>
     <a class="btn" href="#work" data-i18n="hero.cta">ნახე ნამუშევრები</a>
   </div>
 </section>
@@ -48,16 +49,24 @@
 <section class="work" id="work" aria-labelledby="h-work">
   <div class="work-head">
     <h2 id="h-work" data-i18n="work.h">ნამუშევრები</h2>
-    <p class="work-note" data-i18n="work.note">ათივე დემო ვერსიაა: ნამდვილი ბიზნესისთვის გაკეთებული საჩვენებელი საიტი. ფასები და ფოტოები მათზე ნიმუშია.</p>
+    <p class="work-note" data-i18n="work.note">თოთხმეტივე დემო ვერსიაა, ნამდვილი ბიზნესებისთვის გაკეთებული; ფასები და ფოტოები მათზე ნიმუშია. თითოეულის ქვეშ წერია, რა ღირს ამ დონის საიტი.</p>
     <div class="filter" role="group" aria-label="ფილტრი">
       <button type="button" class="on" data-f="all" data-i18n="f.all">ყველა</button>
       <button type="button" data-f="barber" data-i18n="f.barber">ბარბერშოპი</button>
       <button type="button" data-f="salon" data-i18n="f.salon">სალონი</button>
       <button type="button" data-f="guest" data-i18n="f.guest">სასტუმრო სახლი</button>
       <button type="button" data-f="shop" data-i18n="f.shop">მაღაზია</button>
+      <button type="button" data-f="food" data-i18n="f.food">კაფე და დესერტი</button>
+      <button type="button" data-f="kids" data-i18n="f.kids">ბავშვები</button>
     </div>
   </div>
   <div id="projects"></div>
+</section>
+
+<section class="prices" id="prices" aria-labelledby="h-prices">
+  <h2 id="h-prices" data-i18n="pr.h">ფასები</h2>
+  <div class="tiers" id="tiers"></div>
+  <p class="pr-note" data-i18n="pr.note">ფასები მიახლოებითია და შინაარსზეა დამოკიდებული. შედის: დიზაინი, სამამდე ენა, Google-ისთვის მომზადება, გაშვება და პირველი ცვლილებები. .ge დომენი ცალკე იხდება, ჰოსტინგი GitHub Pages-ზე უფასოა.</p>
 </section>
 
 <section class="inside" id="inside" aria-labelledby="h-inside">
@@ -110,10 +119,11 @@
 <footer class="tiles">
   <div class="tile t-say">
     <p data-i18n="ft.say">საიტი, რომელსაც მფლობელი თავად მართავს.</p>
-    <small data-i18n="ft.legal">© 2026 NNN Holding · Web Developing. ნაჩვენები საიტები დემო ვერსიებია.</small>
+    <small data-i18n="ft.legal">© 2026 Gridline. ნაჩვენები საიტები დემო ვერსიებია.</small>
   </div>
   <nav class="tile t-nav" aria-label="ქვედა მენიუ">
     <a href="#work" data-i18n="nav.work">ნამუშევრები</a>
+    <a href="#prices" data-i18n="nav.prices">ფასები</a>
     <a href="#inside" data-i18n="nav.inside">რა შედის</a>
     <a href="#how" data-i18n="nav.how">როგორ ვმუშაობთ</a>
     <a href="#contact" data-i18n="nav.contact">კონტაქტი</a>
@@ -126,7 +136,7 @@
     <p data-i18n="ft.code">კოდი ღიაა GitHub-ზე</p>
     <a href="https://github.com/tikadzenika-bit" rel="noopener">github.com/tikadzenika-bit</a>
   </div>
-  <div class="tile t-mark"><svg viewBox="0 0 640 120" role="img" aria-label="NNN Holding"><text x="320" y="92" text-anchor="middle" font-size="112" letter-spacing="-5" fill="currentColor">NNN Holding</text></svg></div>
+  <div class="tile t-mark"><svg viewBox="0 0 640 120" role="img" aria-label="Gridline"><text x="320" y="92" text-anchor="middle" font-size="112" letter-spacing="-5" fill="currentColor">Gridline</text></svg></div>
   <a class="tile t-go" href="#contact">
     <span data-i18n="ft.go">მოგვწერეთ დემოსთვის</span>
     <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true"><path d="M8 40 40 8M14 8h26v26" fill="none" stroke="currentColor" stroke-width="4"/></svg>

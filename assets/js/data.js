@@ -11,37 +11,63 @@ var CONTACT = {
 
 var LIVE = 'https://tikadzenika-bit.github.io/';
 
+// ფასი (price) ლარში: საიტის დონის მიახლოებითი ფასი. tier: 'a' სავიზიტო, 'b' ინტერაქტიული, 'c' ადმინ პანელით.
 var PROJECTS = [
-  { id: 'gentleman', type: 'barber', name: 'Gentleman Barbershop', url: LIVE + 'gentleman-barbershop/', shots: 7, langs: 'KA · EN · RU',
+  { id: 'anihoe', type: 'kids', tier: 'c', price: 1700, name: 'AniHoe', url: LIVE + 'anihoe/', shots: 7, langs: 'KA · EN · RU',
+    ka: { cat: 'ბავშვთა განვითარების ცენტრი', place: 'თბილისი', what: 'ჯგუფები და განრიგი ასაკის ამრჩევით, განაცხადი, ადმინ პანელი სტატუსებით და თავისუფალი ადგილების დათვლით' },
+    en: { cat: 'kids development centre', place: 'Tbilisi', what: 'Groups and schedule with an age picker, applications, admin panel with statuses and free-seat count' } },
+  { id: 'gentleman', type: 'barber', tier: 'c', price: 1600, name: 'Gentleman Barbershop', url: LIVE + 'gentleman-barbershop/', shots: 7, langs: 'KA · EN · RU',
     ka: { cat: 'ბარბერშოპი', place: 'საბურთალო, ბიძინა კვერნაძის 13', what: 'სლაიდები, პრაისი, ბარბერის არჩევა, ჩაწერა WhatsApp-ით, ადმინ პანელი' },
     en: { cat: 'barbershop', place: 'Saburtalo, 13 Bidzina Kvernadze St', what: 'Slides, price list, pick a barber, WhatsApp booking, admin panel' } },
-  { id: 'lampino', type: 'shop', name: 'Lampino', url: LIVE + 'lampino/', shots: 7, langs: 'KA · EN',
-    ka: { cat: 'ხელნაკეთი ლამპები', place: 'ანტონ ფურცელაძის 30', what: 'კოლექცია ფილტრით, შეკვეთა WhatsApp-ით ნივთის სახელით, ინდივიდუალური შეკვეთა' },
-    en: { cat: 'handmade lamps', place: '30 Anton Purtseladze St', what: 'Collection with filters, WhatsApp order that names the item, custom orders' } },
-  { id: 'khurjini', type: 'shop', name: 'Khurjini', url: LIVE + 'khurjini/', shots: 7, langs: 'EN · KA · RU',
-    ka: { cat: 'სანელებლების მაღაზია', place: 'ძველი თბილისი, ანტონ კათალიკოსის 27', what: 'რამდენიმე ნივთის არჩევა და სიის გაგზავნა WhatsApp-ით, სანელებლების გზამკვლევი, სასაჩუქრე ნაკრებები' },
-    en: { cat: 'spice shop', place: 'Old Tbilisi, 27 Anton Katalikosi St', what: 'Pick several items and send the list on WhatsApp, spice guide, gift sets' } },
-  { id: 'liberty', type: 'barber', name: 'Liberty Barbershop', url: LIVE + 'liberty-barbershop/', shots: 7, langs: 'KA · EN · RU',
+  { id: 'liberty', type: 'barber', tier: 'c', price: 1500, name: 'Liberty Barbershop', url: LIVE + 'liberty-barbershop/', shots: 7, langs: 'KA · EN · RU',
     ka: { cat: 'ბარბერშოპი', place: 'ქეთევან დედოფლის გამზ. 64', what: 'პრაისი, ბარბერის არჩევა, ჩაწერა WhatsApp-ით, ადმინ პანელი' },
     en: { cat: 'barbershop', place: '64 Ketevan Dedopali Ave', what: 'Price list, pick a barber, WhatsApp booking, admin panel' } },
-  { id: 'twobrothers', type: 'barber', name: 'Two Brothers Barbershop', url: LIVE + 'two-brothers-barbershop/', shots: 7, langs: 'KA · EN · RU',
+  { id: 'twobrothers', type: 'barber', tier: 'c', price: 1400, name: 'Two Brothers Barbershop', url: LIVE + 'two-brothers-barbershop/', shots: 7, langs: 'KA · EN · RU',
     ka: { cat: 'ბარბერშოპი', place: 'მუხიანი', what: 'სლაიდები, პრაისი, ჩაწერა WhatsApp-ით, ადმინ პანელი' },
     en: { cat: 'barbershop', place: 'Mukhiani', what: 'Slides, price list, WhatsApp booking, admin panel' } },
-  { id: 'impress', type: 'salon', name: 'Impress Beauty Club', url: LIVE + 'Impress-beauty-salon/index-2.html', shots: 7, langs: 'EN',
-    ka: { cat: 'სილამაზის სალონი', place: 'ვაკე', what: 'სერვისები და ფასები კატეგორიებით, ონლაინ ჩაწერა, კითხვები' },
-    en: { cat: 'beauty salon', place: 'Vake', what: 'Services and prices by category, online booking, FAQ' } },
-  { id: 'lea', type: 'guest', name: 'Guest House Lea', url: LIVE + 'lea/', shots: 7, langs: 'EN · KA · RU',
+  { id: 'khurjini', type: 'shop', tier: 'b', price: 1200, name: 'Khurjini', url: LIVE + 'khurjini/', shots: 7, langs: 'EN · KA · RU',
+    ka: { cat: 'სანელებლების მაღაზია', place: 'ძველი თბილისი, ანტონ კათალიკოსის 27', what: 'რამდენიმე ნივთის არჩევა და სიის გაგზავნა WhatsApp-ით, სანელებლების გზამკვლევი, სასაჩუქრე ნაკრებები' },
+    en: { cat: 'spice shop', place: 'Old Tbilisi, 27 Anton Katalikosi St', what: 'Pick several items and send the list on WhatsApp, spice guide, gift sets' } },
+  { id: 'isani', type: 'guest', tier: 'b', price: 1200, name: 'Hostel in Isani', url: LIVE + 'isani-hostel/', shots: 7, langs: 'KA · EN · RU',
+    ka: { cat: 'ჰოსტელი', place: 'ისანის მეტროსთან', what: 'მარშრუტები ისანიდან მთელ ქალაქში, ოთახები და ფასის დათვლა, ჯავშანი WhatsApp-ით' },
+    en: { cat: 'hostel', place: 'By Isani metro', what: 'Routes from Isani across the city, rooms with a price calculator, WhatsApp booking' } },
+  { id: 'spaguletti', type: 'food', tier: 'b', price: 1100, name: 'Spaguletti', url: LIVE + 'spaguletti/', shots: 7, langs: 'KA · EN · RU',
+    ka: { cat: 'ნაყინი და ვაფლი', place: 'ვაშლოვანის 1 / კოსტავას 21', what: 'გემოების მენიუ, „ააწყე შენი ჭიქა“ და შეკვეთა WhatsApp-ით, „ღიაა ახლა“' },
+    en: { cat: 'ice cream & waffles', place: '1 Vashlovani / 21 Kostava St', what: 'Flavour menu, build-your-cup with WhatsApp order, open-now badge' } },
+  { id: 'matasse', type: 'food', tier: 'b', price: 1100, name: 'Matasse1822', url: LIVE + 'matasse/', shots: 7, langs: 'KA · EN · RU',
+    ka: { cat: 'საკონდიტრო', place: 'ძველი თბილისი, ვერცხლის 40', what: 'ვიტრინა საათის მიხედვით, დესერტის გადადება WhatsApp-ით, ინტერიერი ალისის თემით' },
+    en: { cat: 'patisserie', place: 'Old Tbilisi, 40 Vertskhli St', what: 'Display case by time of day, keep-a-dessert on WhatsApp, Alice-themed interior' } },
+  { id: 'lampino', type: 'shop', tier: 'a', price: 1000, name: 'Lampino', url: LIVE + 'lampino/', shots: 7, langs: 'KA · EN',
+    ka: { cat: 'ხელნაკეთი ლამპები', place: 'ანტონ ფურცელაძის 30', what: 'კოლექცია ფილტრით, შეკვეთა WhatsApp-ით ნივთის სახელით, ინდივიდუალური შეკვეთა' },
+    en: { cat: 'handmade lamps', place: '30 Anton Purtseladze St', what: 'Collection with filters, WhatsApp order that names the item, custom orders' } },
+  { id: 'lea', type: 'guest', tier: 'a', price: 1000, name: 'Guest House Lea', url: LIVE + 'lea/', shots: 7, langs: 'EN · KA · RU',
     ka: { cat: 'სასტუმრო სახლი', place: 'ძველი თბილისი, გრიშაშვილის 25', what: 'თარიღების არჩევა და მოთხოვნა WhatsApp-ით, რა არის ახლოს' },
     en: { cat: 'guest house', place: 'Old Tbilisi, 25 Grishashvili St', what: 'Pick dates and ask on WhatsApp, what is nearby' } },
-  { id: 'madmen', type: 'barber', name: 'Mad Men', url: LIVE + 'Mad-Men-Barbershop/', shots: 5, langs: 'KA',
-    ka: { cat: 'ბარბერშოპი', place: 'გლდანი, ილია ვეკუას 16ა', what: 'ფასების დაფა, ონლაინ ჩაწერა, რუკა' },
-    en: { cat: 'barbershop', place: 'Gldani, 16a Ilia Vekua St', what: 'Price board, online booking, map' } },
-  { id: 'umbrella', type: 'guest', name: 'Guest House Umbrella', url: LIVE + 'umbrella/', shots: 7, langs: 'EN · KA · RU',
+  { id: 'umbrella', type: 'guest', tier: 'a', price: 1000, name: 'Guest House Umbrella', url: LIVE + 'umbrella/', shots: 7, langs: 'EN · KA · RU',
     ka: { cat: 'სასტუმრო სახლი', place: 'ისანი, გუჯარეთის 35', what: 'თარიღების არჩევა და მოთხოვნა WhatsApp-ით, როგორ მოვიდე' },
     en: { cat: 'guest house', place: 'Isani, 35 Gujareti St', what: 'Pick dates and ask on WhatsApp, getting around' } },
-  { id: 'whenin', type: 'guest', name: 'When in Tbilisi', url: LIVE + 'when-in-tbilisi/', shots: 7, langs: 'EN · KA · RU',
+  { id: 'whenin', type: 'guest', tier: 'a', price: 1000, name: 'When in Tbilisi', url: LIVE + 'when-in-tbilisi/', shots: 7, langs: 'EN · KA · RU',
     ka: { cat: 'სასტუმრო სახლი', place: 'ჩუღურეთი, გოგი დოლიძის 18', what: 'თარიღების არჩევა და მოთხოვნა WhatsApp-ით, სტუმრების შეფასებები' },
-    en: { cat: 'guest house', place: 'Chugureti, 18 Gogi Dolidze St', what: 'Pick dates and ask on WhatsApp, guest ratings' } }
+    en: { cat: 'guest house', place: 'Chugureti, 18 Gogi Dolidze St', what: 'Pick dates and ask on WhatsApp, guest ratings' } },
+  { id: 'impress', type: 'salon', tier: 'a', price: 900, name: 'Impress Beauty Club', url: LIVE + 'Impress-beauty-salon/index-2.html', shots: 7, langs: 'EN',
+    ka: { cat: 'სილამაზის სალონი', place: 'ვაკე', what: 'სერვისები და ფასები კატეგორიებით, ონლაინ ჩაწერა, კითხვები' },
+    en: { cat: 'beauty salon', place: 'Vake', what: 'Services and prices by category, online booking, FAQ' } },
+  { id: 'madmen', type: 'barber', tier: 'a', price: 800, name: 'Mad Men', url: LIVE + 'Mad-Men-Barbershop/', shots: 5, langs: 'KA',
+    ka: { cat: 'ბარბერშოპი', place: 'გლდანი, ილია ვეკუას 16ა', what: 'ფასების დაფა, ონლაინ ჩაწერა, რუკა' },
+    en: { cat: 'barbershop', place: 'Gldani, 16a Ilia Vekua St', what: 'Price board, online booking, map' } }
+];
+
+// ფასების დონეები
+var TIERS = [
+  { id: 'a', from: 800, to: 1000, ex: ['madmen', 'impress', 'lea', 'lampino'],
+    ka: ['სავიზიტო საიტი', 'ერთი გვერდი: სერვისები ან მენიუ, ფოტოები, რუკა, საათები და WhatsApp-ის ღილაკები. ერთი-სამი ენა.'],
+    en: ['Showcase site', 'One page: services or menu, photos, map, hours and WhatsApp buttons. One to three languages.'] },
+  { id: 'b', from: 1100, to: 1300, ex: ['spaguletti', 'matasse', 'khurjini', 'isani'],
+    ka: ['ინტერაქტიული საიტი', 'სამი ენა და ერთი „ცოცხალი“ ინსტრუმენტი: შეკვეთის ამწყობი, ნივთების სია, მარშრუტები ან ფასის დათვლა. შეკვეთა მზა ტექსტით WhatsApp-ში მოდის.'],
+    en: ['Interactive site', 'Three languages plus one live tool: an order builder, an item list, routes or a price calculator. Orders arrive as ready WhatsApp text.'] },
+  { id: 'c', from: 1400, to: 1700, ex: ['twobrothers', 'liberty', 'gentleman', 'anihoe'],
+    ka: ['საიტი ადმინ პანელით', 'ჩაწერა ოსტატით, დღით და საათით, ჯავშნების სია და ადმინ პანელი, საიდანაც ფასს, ფოტოს და საათებს თავად ცვლით.'],
+    en: ['Site with admin panel', 'Booking by master, day and time, a booking list and an admin panel where you change prices, photos and hours yourself.'] }
 ];
 
 var FEATURES = {
@@ -87,11 +113,14 @@ var I18N = {
   en: {
     'nav.work': 'Work', 'nav.inside': 'What is inside', 'nav.how': 'How we work', 'nav.contact': 'Contact',
     'hero.l1': 'Websites for', 'hero.l2': 'Tbilisi businesses',
-    'hero.sub': 'Three languages, WhatsApp booking and an admin panel where you change prices yourself. Ten demos are live.',
+    'hero.sub': 'Three languages, WhatsApp booking and an admin panel where you change prices yourself. Fourteen demos are live.',
     'hero.cta': 'See the work',
     'work.h': 'Work',
-    'work.note': 'All ten are demo versions: a sample site built for a real business. Prices and photos on them are placeholders.',
-    'f.all': 'All', 'f.barber': 'Barbershops', 'f.salon': 'Salon', 'f.guest': 'Guest houses', 'f.shop': 'Shops',
+    'work.note': 'All fourteen are demo versions built for real businesses; prices and photos on them are placeholders. Under each one: what a site of that level costs.',
+    'f.all': 'All', 'f.barber': 'Barbershops', 'f.salon': 'Salon', 'f.guest': 'Guest houses', 'f.shop': 'Shops', 'f.food': 'Cafés & sweets', 'f.kids': 'Kids',
+    'nav.prices': 'Prices', 'pr.h': 'Prices', 'pr.ex': 'For example:',
+    'pr.note': 'Prices are approximate and depend on the content. Included: design, up to three languages, preparation for Google, launch and the first edits. A .ge domain is paid separately; hosting on GitHub Pages is free.',
+    'price': 'Site of this level',
     'open': 'Open the site',
     'in.h': 'What a site includes', 'in.a': 'The site', 'in.b': 'Booking', 'in.c': 'Admin panel',
     'in.a.sum': 'One page that reads as well on a phone as on a computer.',
@@ -103,9 +132,9 @@ var I18N = {
     'c.q': 'Want a site like these?', 'c.meta': 'Tbilisi · we reply the same day',
     'c.wa': 'Write on WhatsApp', 'c.gh': 'See the code on GitHub',
     'ft.say': 'A site the owner runs without help.',
-    'ft.legal': '© 2026 NNN Holding · Web Developing. The sites shown are demo versions.',
+    'ft.legal': '© 2026 Gridline. The sites shown are demo versions.',
     'ft.city': 'Tbilisi', 'ft.code': 'The code is open on GitHub', 'ft.go': 'Write to us for a demo',
-    'title': 'NNN Holding — websites for Tbilisi businesses'
+    'title': 'Gridline — websites for Tbilisi businesses'
   },
-  ka: { 'open': 'გახსენი საიტი', 'c.wa': 'მოგვწერეთ WhatsApp-ზე', 'c.gh': 'ნახეთ კოდი GitHub-ზე', 'title': 'NNN Holding — საიტები თბილისის ბიზნესისთვის' }
+  ka: { 'pr.ex': 'მაგალითად:', 'price': 'ამ დონის საიტი', 'open': 'გახსენი საიტი', 'c.wa': 'მოგვწერეთ WhatsApp-ზე', 'c.gh': 'ნახეთ კოდი GitHub-ზე', 'title': 'Gridline — საიტები თბილისის ბიზნესისთვის' }
 };
