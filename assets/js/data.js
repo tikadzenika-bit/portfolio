@@ -13,9 +13,9 @@ var LIVE = 'https://tikadzenika-bit.github.io/';
 
 // ფასი (price) ლარში: საიტის დონის მიახლოებითი ფასი. tier: 'a' სავიზიტო, 'b' ინტერაქტიული, 'c' ადმინ პანელით.
 var PROJECTS = [
-  { id: 'anihoe', type: 'kids', tier: 'c', price: 1700, name: 'AniHoe', url: LIVE + 'anihoe/', shots: 7, langs: 'KA · EN · RU',
-    ka: { cat: 'ბავშვთა განვითარების ცენტრი', place: 'თბილისი', what: 'ჯგუფები და განრიგი ასაკის ამრჩევით, განაცხადი, ადმინ პანელი სტატუსებით და თავისუფალი ადგილების დათვლით' },
-    en: { cat: 'kids development centre', place: 'Tbilisi', what: 'Groups and schedule with an age picker, applications, admin panel with statuses and free-seat count' } },
+  { id: 'joker', type: 'barber', tier: 'c', price: 1700, name: 'JOKER Barbershop', url: LIVE + 'joker-barbershop/', shots: 7, langs: 'KA · EN · RU',
+    ka: { cat: 'ბარბერშოპების ქსელი', place: 'ორი ფილიალი: ბახტრიონი და ყაზბეგი', what: 'სერვისები და ფასები, ბარბერები, ფილიალები, ნამუშევრები, ჩაწერა WhatsApp-ით, ადმინ პანელი ელფოსტით და პაროლით' },
+    en: { cat: 'barbershop chain', place: 'Two branches: Bakhtrioni and Kazbegi', what: 'Services and prices, barbers, branches, work gallery, WhatsApp booking, admin panel with email login' } },
   { id: 'gentleman', type: 'barber', tier: 'c', price: 1600, name: 'Gentleman Barbershop', url: LIVE + 'gentleman-barbershop/', shots: 7, langs: 'KA · EN · RU',
     ka: { cat: 'ბარბერშოპი', place: 'საბურთალო, ბიძინა კვერნაძის 13', what: 'სლაიდები, პრაისი, ბარბერის არჩევა, ჩაწერა WhatsApp-ით, ადმინ პანელი' },
     en: { cat: 'barbershop', place: 'Saburtalo, 13 Bidzina Kvernadze St', what: 'Slides, price list, pick a barber, WhatsApp booking, admin panel' } },
@@ -28,9 +28,6 @@ var PROJECTS = [
   { id: 'khurjini', type: 'shop', tier: 'b', price: 1200, name: 'Khurjini', url: LIVE + 'khurjini/', shots: 7, langs: 'EN · KA · RU',
     ka: { cat: 'სანელებლების მაღაზია', place: 'ძველი თბილისი, ანტონ კათალიკოსის 27', what: 'რამდენიმე ნივთის არჩევა და სიის გაგზავნა WhatsApp-ით, სანელებლების გზამკვლევი, სასაჩუქრე ნაკრებები' },
     en: { cat: 'spice shop', place: 'Old Tbilisi, 27 Anton Katalikosi St', what: 'Pick several items and send the list on WhatsApp, spice guide, gift sets' } },
-  { id: 'isani', type: 'guest', tier: 'b', price: 1200, name: 'Hostel in Isani', url: LIVE + 'isani-hostel/', shots: 7, langs: 'KA · EN · RU',
-    ka: { cat: 'ჰოსტელი', place: 'ისანის მეტროსთან', what: 'მარშრუტები ისანიდან მთელ ქალაქში, ოთახები და ფასის დათვლა, ჯავშანი WhatsApp-ით' },
-    en: { cat: 'hostel', place: 'By Isani metro', what: 'Routes from Isani across the city, rooms with a price calculator, WhatsApp booking' } },
   { id: 'spaguletti', type: 'food', tier: 'b', price: 1100, name: 'Spaguletti', url: LIVE + 'spaguletti/', shots: 7, langs: 'KA · EN · RU',
     ka: { cat: 'ნაყინი და ვაფლი', place: 'ვაშლოვანის 1 / კოსტავას 21', what: 'გემოების მენიუ, „ააწყე შენი ჭიქა“ და შეკვეთა WhatsApp-ით, „ღიაა ახლა“' },
     en: { cat: 'ice cream & waffles', place: '1 Vashlovani / 21 Kostava St', what: 'Flavour menu, build-your-cup with WhatsApp order, open-now badge' } },
@@ -62,10 +59,10 @@ var TIERS = [
   { id: 'a', from: 800, to: 1000, ex: ['madmen', 'impress', 'lea', 'lampino'],
     ka: ['სავიზიტო საიტი', 'ერთი გვერდი: სერვისები ან მენიუ, ფოტოები, რუკა, საათები და WhatsApp-ის ღილაკები. ერთი-სამი ენა.'],
     en: ['Showcase site', 'One page: services or menu, photos, map, hours and WhatsApp buttons. One to three languages.'] },
-  { id: 'b', from: 1100, to: 1300, ex: ['spaguletti', 'matasse', 'khurjini', 'isani'],
+  { id: 'b', from: 1100, to: 1300, ex: ['spaguletti', 'matasse', 'khurjini'],
     ka: ['ინტერაქტიული საიტი', 'სამი ენა და ერთი „ცოცხალი“ ინსტრუმენტი: შეკვეთის ამწყობი, ნივთების სია, მარშრუტები ან ფასის დათვლა. შეკვეთა მზა ტექსტით WhatsApp-ში მოდის.'],
     en: ['Interactive site', 'Three languages plus one live tool: an order builder, an item list, routes or a price calculator. Orders arrive as ready WhatsApp text.'] },
-  { id: 'c', from: 1400, to: 1700, ex: ['twobrothers', 'liberty', 'gentleman', 'anihoe'],
+  { id: 'c', from: 1400, to: 1700, ex: ['twobrothers', 'liberty', 'gentleman', 'joker'],
     ka: ['საიტი ადმინ პანელით', 'ჩაწერა ოსტატით, დღით და საათით, ჯავშნების სია და ადმინ პანელი, საიდანაც ფასს, ფოტოს და საათებს თავად ცვლით.'],
     en: ['Site with admin panel', 'Booking by master, day and time, a booking list and an admin panel where you change prices, photos and hours yourself.'] }
 ];
@@ -113,10 +110,10 @@ var I18N = {
   en: {
     'nav.work': 'Work', 'nav.inside': 'What is inside', 'nav.how': 'How we work', 'nav.contact': 'Contact',
     'hero.l1': 'Websites for', 'hero.l2': 'Tbilisi businesses',
-    'hero.sub': 'Three languages, WhatsApp booking and an admin panel where you change prices yourself. Fourteen demos are live.',
+    'hero.sub': 'Three languages, WhatsApp booking and an admin panel where you change prices yourself. Thirteen demos are live.',
     'hero.cta': 'See the work',
     'work.h': 'Work',
-    'work.note': 'All fourteen are demo versions built for real businesses; prices and photos on them are placeholders. Under each one: what a site of that level costs.',
+    'work.note': 'All thirteen are demo versions built for real businesses; prices and photos on them are placeholders. Under each one: what a site of that level costs.',
     'f.all': 'All', 'f.barber': 'Barbershops', 'f.salon': 'Salon', 'f.guest': 'Guest houses', 'f.shop': 'Shops', 'f.food': 'Cafés & sweets', 'f.kids': 'Kids',
     'nav.prices': 'Prices', 'pr.h': 'Prices', 'pr.ex': 'For example:',
     'pr.note': 'Prices are approximate and depend on the content. Included: design, up to three languages, preparation for Google, launch and the first edits. A .ge domain is paid separately; hosting on GitHub Pages is free.',

@@ -28,8 +28,8 @@
 
 `data.js` → `TIERS` (სექცია „ფასები“) და თითო პროექტის `price` („ამ დონის საიტი … ₾“):
 - **a — სავიზიტო, 800–1 000 ₾:** Mad Men 800, Impress 900, Lea / Umbrella / When in Tbilisi / Lampino 1 000.
-- **b — ინტერაქტიული, 1 100–1 300 ₾:** Spaguletti 1 100, Matasse1822 1 100, Khurjini 1 200, Hostel in Isani 1 200.
-- **c — ადმინ პანელით, 1 400–1 700 ₾:** Two Brothers 1 400, Liberty 1 500, Gentleman 1 600, AniHoe 1 700.
+- **b — ინტერაქტიული, 1 100–1 300 ₾:** Spaguletti 1 100, Matasse1822 1 100, Khurjini 1 200.
+- **c — ადმინ პანელით, 1 400–1 700 ₾:** Two Brothers 1 400, Liberty 1 500, Gentleman 1 600, JOKER 1 700.
 
 ## წესები
 
